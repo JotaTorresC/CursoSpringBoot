@@ -15,7 +15,7 @@ public class UserController {
     @GetMapping("/detalle")
     public String detalle(Model model) {
 
-        User user = new User("Natalia", "Torres");
+        User user = new User("Natalia", "Torres", "Natalia@Gmail");
 
         model.addAttribute("titulo", "Hola Mundo Spring boot");
         model.addAttribute("user", user);

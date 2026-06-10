@@ -1,6 +1,6 @@
 package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
 
- import java.util.ArrayList;
+ import java.util.Arrays;
  import java.util.HashMap;
  import java.util.List;
  import java.util.Map;
@@ -17,15 +17,18 @@ import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User
 @RequestMapping("/api")
 public class UserRestController {
 
+    @GetMapping("/detalleLista")
     public List<User> list() {
         User user1 = new User("Jason", "Torres");
         User user2 = new User("Vanessa", "Posada");
         User user3= new User(" Natalia", "Torres");
 
-        List<User> listaUsuarios = new ArrayList<>();
-        listaUsuarios.add(user1);
-        listaUsuarios.add(user2);
-        listaUsuarios.add(user3);
+        List<User> listaUsuarios = Arrays.asList(user1, user2, user3);
+
+//        List<User> listaUsuarios = new ArrayList<>();
+//        listaUsuarios.add(user1);
+//        listaUsuarios.add(user2);
+//        listaUsuarios.add(user3);
 
         return listaUsuarios;
     }
@@ -40,8 +43,6 @@ public class UserRestController {
         return usuarioDto1;
     }
 
-
-    
     @GetMapping("/detalleMap")
     public Map<String, Object> detalleMap() {
 
