@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}" > Document</title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+    <div th:if="${listaUsuarios.isEmpty()}" > No tiene elementos usuarios</div>
+    <table th:if="${not listaUsuarios.isEmpty()}">
+        <thead>
+            <tr>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>email</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="user: ${listaUsuarios}">
+                <td th:text="${user.nombre}"></td>
+                <td th:text="${user.apellido}"></td>
+                <td th:if="${user.email}" th:text="${user.email}"></td>
+                <td th:if="${user.email == null}" th:text="${'No tiene correo'}"></td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
