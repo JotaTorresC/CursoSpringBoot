@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,19 +38,26 @@ public class UserController {
     }
     */
 
+    ////////////////////////////////////////////////////////////////////////////////////////
+
+    //asi podemos usar una especie de datos quedamos que querramos reutilizar con el @ModelAttribute()
     @GetMapping("/list")
     public String list(ModelMap model) {
+        model.addAttribute("title", "Listado De Usuarios!");
+        return "list";
+    }
+
+    @ModelAttribute("listaUsuarios")
+    public List<User> userModel() {
         List<User> listaUsuarios = Arrays.asList(
                 new User("pepa", "gonzales"),
                 new User("jota", "ramirez", "jota@gmail"),
                 new User("ursula", "perez"),
                 new User("lalo", "roe", "lalo@gmail"));
 
-
-        model.addAttribute("title", "Listado De Usuarios!");
-        model.addAttribute("listaUsuarios", listaUsuarios);
-
-        return "list";
+        return listaUsuarios;
     }
+
+    ////////////////////////////////////////////////////////////////////////////////////
 }
 
