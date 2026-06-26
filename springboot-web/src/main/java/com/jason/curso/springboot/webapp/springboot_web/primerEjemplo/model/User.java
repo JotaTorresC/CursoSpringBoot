@@ -1,5 +1,8 @@
 package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({"nombre", "apellido", "email"})
 public class User {
 
     private String nombre;

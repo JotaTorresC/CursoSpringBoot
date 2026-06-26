@@ -1,16 +1,14 @@
 package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
 
 import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto.ParamDto;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("api/var")
+@RequestMapping("/api/var")
 public class PahtVariableController {
 
     @GetMapping("/baz/{message}")
@@ -26,6 +24,13 @@ public class PahtVariableController {
         json.put("product", product);
         json.put("id", id);
         return json;
+    }
+
+    @PostMapping("/create")
+    public User create(@RequestBody User user) {
+        //hacer algo con el usuario ejemplo un save en la base de datos
+        user.setNombre(user.getNombre().toUpperCase());
+        return user;
     }
 
 }
