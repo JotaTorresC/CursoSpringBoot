@@ -1,7 +1,6 @@
 package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
 
 import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto.ParamDto;
-import com.sun.net.httpserver.HttpServer;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +39,4 @@ public class RequestParamsController {
         params.setCode(code);
         return params;
     }
-
-
 }
