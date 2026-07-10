@@ -1,4 +1,4 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto;
+package com.jason.curso.springboot.webapp.springboot_web.dto;
 
 public class ParamDto {
 

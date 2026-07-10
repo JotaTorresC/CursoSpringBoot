@@ -1,4 +1,4 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
+package com.jason.curso.springboot.webapp.springboot_web.controlles;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

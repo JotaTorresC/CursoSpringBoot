@@ -1,7 +1,7 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
+package com.jason.curso.springboot.webapp.springboot_web.controlles;
 
-import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto.ParamDto;
-import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User;
+import com.jason.curso.springboot.webapp.springboot_web.dto.ParamDto;
+import com.jason.curso.springboot.webapp.springboot_web.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;

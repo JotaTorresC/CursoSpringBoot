@@ -1,16 +1,16 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
+package com.jason.curso.springboot.webapp.springboot_web.controlles;
 
  import java.util.Arrays;
  import java.util.HashMap;
  import java.util.List;
  import java.util.Map;
 
- import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto.UserDto;
+ import com.jason.curso.springboot.webapp.springboot_web.dto.UserDto;
  import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User;
+import com.jason.curso.springboot.webapp.springboot_web.model.User;
 
 //Jjason apiRest
 @RestController

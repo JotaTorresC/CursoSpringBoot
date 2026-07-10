@@ -1,4 +1,4 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model;
+package com.jason.curso.springboot.webapp.springboot_web.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 

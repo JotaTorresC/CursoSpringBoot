@@ -1,6 +1,6 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto;
+package com.jason.curso.springboot.webapp.springboot_web.dto;
 
-import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.model.User;
+import com.jason.curso.springboot.webapp.springboot_web.model.User;
 
 public class UserDto {
     private String TituloPagina;

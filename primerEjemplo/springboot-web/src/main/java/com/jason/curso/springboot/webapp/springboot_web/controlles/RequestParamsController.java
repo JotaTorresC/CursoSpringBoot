@@ -1,6 +1,6 @@
-package com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.controlles;
+package com.jason.curso.springboot.webapp.springboot_web.controlles;
 
-import com.jason.curso.springboot.webapp.springboot_web.primerEjemplo.dto.ParamDto;
+import com.jason.curso.springboot.webapp.springboot_web.dto.ParamDto;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
