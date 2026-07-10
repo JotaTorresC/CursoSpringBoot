@@ -22,7 +22,7 @@ public class UserController {
 
         User user = new User("Natalia", "Torres", "Natalia@Gmail");
 
-        model.addAttribute("titulo", "Hola Mundo Spring boot");
+        model.addAttribute("title", "Hola Mundo Spring boot");
         model.addAttribute("user", user);
 
         return "detalle";
@@ -30,8 +30,8 @@ public class UserController {
 
     /*  
     public String detalle(Map<String, Object> model) {
-        model.put("titulo", "Hola Mundo Spring boot");
-        model.put("nombre", "Jason");
+        model.put("title", "Hola Mundo Spring boot");
+        model.put("name", "Jason");
         model.put("apellido", "Torres");
 
         return "detalle";

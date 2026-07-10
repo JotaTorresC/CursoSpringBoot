@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="${titulo}">Document</title>
+    <title th:text="${title}">Document</title>
 </head>
 <body>
-    <h1 th:text="${titulo}"></h1>
+    <h1 th:text="${title}"></h1>
     <ul>
         <li th:text="${user.nombre}"></li>
         <li th:text="${user.apellido}"></li>
         <Li th:if="${user.email}" th:text="${user.email}"></Li>
         <li th:if="${user.email == null}" th:text="${'No tiene correo'}"></li>
     </ul>
+    <a th:href="@{/list}"> Ver Listado</a><br>
+    <a th:href="@{/api/params/foo?message=Hola que tal prueba}">Ver Mensaje 1</a><br>
+    <a th:href="@{/api/params/foo(message='Hola que tal prueba 2')}">Ver Mensaje 2</a><br>
+    <a th:href="@{/api/params/bar(text='Hola que tal prueba 2', code=3424324)}">Ver bar mix param 2</a><br>
+    <a th:href="@{/api/var/baz/Hola mensaje de prueba}">Ver var path variable</a><br>
+    <a th:href="@{'/api/var/baz/' + ${title}}">Ver var path variable 2</a><br>
+    <a th:href="@{'/api/var/baz/' + 'Hola mensaje de prueba'}">Ver var path variable 3</a>
+
+
 </body>
 </html>
