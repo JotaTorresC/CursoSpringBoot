@@ -3,12 +3,13 @@ package com.jason.springboot.di.app.springboot_di.services;
 import java.util.List;
 import java.util.stream.Collectors;
 import com.jason.springboot.di.app.springboot_di.model.Product;
-import com.jason.springboot.di.app.springboot_di.repositories.ProductRepository;
+import com.jason.springboot.di.app.springboot_di.repositories.ProductRepositoryImpl;
 
-public class ProductService {
+public class ProductServiceImpl implements IProductService{
 
-    private ProductRepository repository = new ProductRepository();
+    private ProductRepositoryImpl repository = new ProductRepositoryImpl();
 
+    @Override
     public List<Product> findAll() {
         
         return repository.findAll().stream().map(p -> {
@@ -22,6 +23,7 @@ public class ProductService {
         }).collect(Collectors.toList()); //asi es como se convierte un stream a una lista collect(Collectors.toList())
     }
 
+    @Override
     public Product findById(Long id) {
         return repository.findById(id);
     }
